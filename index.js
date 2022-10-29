@@ -1,15 +1,13 @@
 /**
  * 
- * Package: require-urls
+ * Package: root-dirs
  * Author: Ganesh B
- * Description: Nodejs npm module to traverse folder using code or cli or use glob patterns
- * Install: npm i require-urls --save
- * Github: https://github.com/ganeshkbhat/requireurl
- * npmjs Link: https://www.npmjs.com/package/require-urls
- * File: src/getroot.js
- * File Description: Using require-urls instead of require to fetch files from git repositories like Github or Bitbucket like repository directly
- * 
- * git-rest: https://www.softwaretestinghelp.com/github-rest-api-tutorial/#:~:text=Log%20in%20to%20your%20GitHub,and%20click%20on%20Create%20Token.
+ * Description: Get root folders of git, svn, mercurial, ftp, nodejs node_modules, nodejs package.json, nodejs .jscache folder
+ * Install: npm i root-dirs --save
+ * Github: https://github.com/ganeshkbhat/get-root
+ * npmjs Link: https://www.npmjs.com/package/root-dirs
+ * File: index.js
+ * File Description: Get root folders of git, svn, mercurial, ftp, nodejs node_modules, nodejs package.json, nodejs .jscache folder.
  * 
 */
 

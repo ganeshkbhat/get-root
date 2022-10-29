@@ -14,10 +14,3 @@
 /* eslint no-console: 0 */
 
 'use strict';
-
-
-import { _getRoot, _getGitRoot, _getSvnRoot, _getFtpRoot, _getNodeModulesRoot, _getPackageJsonRoot, _createJscachePath } from './index.js';
-import * as getroot from "./index.js";
-
-export default getroot;
-export { _getRoot, _getGitRoot, _getSvnRoot, _getFtpRoot, _getNodeModulesRoot, _getPackageJsonRoot, _createJscachePath };
