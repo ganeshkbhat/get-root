@@ -1,5 +1,5 @@
 {
-  "name": "get-root",
+  "name": "root-dirs",
   "version": "0.0.1",
   "description": "Get root folders of git, svn, mercurial, ftp, nodejs node_modules, nodejs package.json",
   "main": "index.js",
