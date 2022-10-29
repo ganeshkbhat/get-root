@@ -76,16 +76,19 @@ function _getRoot(startdirectory, options = { baseType: "git" }) {
  */
 function _getNodeModulesRoot(startdirectory, options) {
     function cb(fullPath, options) {
-        if (!fs.lstatSync(fullPath).isDirectory()) {
-            var content = fs.readFileSync(fullPath, { encoding: 'utf-8' });
-            var match = /^node_modulesdir: (.*)\s*$/.exec(content);
-            if (match) {
-                return path.normalize(match[1]);
+        if ((options.baseType === "node_modules") && !fs.lstatSync(fullPath).isDirectory()) {
+            if (!fs.lstatSync(fullPath).isDirectory()) {
+                var content = fs.readFileSync(fullPath, { encoding: 'utf-8' });
+                var match = /^node_modulesdir: (.*)\s*$/.exec(content);
+                if (match) {
+                    return path.normalize(match[1]);
+                }
             }
         }
         return path.normalize(fullPath);
     }
-    return _getRoot(startdirectory, { ...options, baseType: "node_modules", getRootCallback: cb });
+    options.baseType = "node_modules";
+    return _getRoot(startdirectory, { ...options, baseType: options.baseType, getRootCallback: cb });
 }
 
 /**
@@ -140,6 +143,7 @@ function _getSvnRoot(startdirectory, options) {
  * @return {*} 
  */
 function _getFtpRoot(startdirectory, options) {
+    return "[ERROR]: NOT IMPLEMENTED YET";
     function cb(fullPath, options) {
 
         return path.normalize(fullPath);
@@ -157,16 +161,16 @@ function _getFtpRoot(startdirectory, options) {
  */
 function _getMercurialRoot(startdirectory, options) {
     function cb(fullPath, options) {
-        if ((options.baseType === ".svn" || options.baseType === "svn") && !fs.lstatSync(fullPath).isDirectory()) {
+        if ((options.baseType === ".hg" || options.baseType === "hg" || options.baseType === "mercurial") && !fs.lstatSync(fullPath).isDirectory()) {
             var content = fs.readFileSync(fullPath, { encoding: 'utf-8' });
-            var match = /^svndir: (.*)\s*$/.exec(content);
+            var match = /^hgdir: (.*)\s*$/.exec(content);
             if (match) {
                 return path.normalize(match[1]);
             }
         }
         return path.normalize(fullPath);
     }
-    options.baseType = "";
+    options.baseType = "hg";
     return _getRoot(startdirectory, { ...options, baseType: options.baseType, getRootCallback: cb });
 }
 
@@ -179,19 +183,44 @@ function _getMercurialRoot(startdirectory, options) {
  */
 function _getPackageJsonRoot(startdirectory, options) {
     function cb(fullPath, options) {
-        if (!fs.lstatSync(fullPath).isDirectory()) {
-            var content = fs.readFileSync(fullPath, { encoding: 'utf-8' });
-            var match = /^node_modulesdir: (.*)\s*$/.exec(content);
-            if (match) {
-                return path.normalize(match[1]);
+        if ((options.baseType === "package.json") && !fs.lstatSync(fullPath).isDirectory()) {
+            if (!fs.lstatSync(fullPath).isDirectory()) {
+                var content = fs.readFileSync(fullPath, { encoding: 'utf-8' });
+                var match = /^node_modulesdir: (.*)\s*$/.exec(content);
+                if (match) {
+                    return path.normalize(match[1]);
+                }
             }
         }
         return path.normalize(fullPath);
     }
-    return _getRoot(startdirectory, { ...options, baseType: "package.json", getRootCallback: cb });
+    options.baseType = "package.json";
+    return _getRoot(startdirectory, { ...options, baseType: options.baseType, getRootCallback: cb });
 }
 
-function _createJscachePath(request, baseDirectory, options) { }
+/**
+ *
+ *
+ * @param {*} startdirectory
+ * @param {*} options
+ * @return {*} 
+ */
+function _createJscachePath(startdirectory, options) {
+    function cb(fullPath, options) {
+        if ((options.baseType === ".jscache" || options.baseType === "jscache") && !fs.lstatSync(fullPath).isDirectory()) {
+            if (!fs.lstatSync(fullPath).isDirectory()) {
+                var content = fs.readFileSync(fullPath, { encoding: 'utf-8' });
+                var match = /^jscachedir: (.*)\s*$/.exec(content);
+                if (match) {
+                    return path.normalize(match[1]);
+                }
+            }
+        }
+        return path.normalize(fullPath);
+    }
+    options.baseType = "jscache";
+    return _getRoot(startdirectory, { ...options, baseType: options.baseType, getRootCallback: cb });
+}
 
 // /**
 //  *
