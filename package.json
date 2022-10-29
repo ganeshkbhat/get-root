@@ -28,5 +28,6 @@
     "sinon": "^14.0.1",
     "unimported": "^1.22.0"
   },
+  "keywords": [],
   "homepage": "https://github.com/ganeshkbhat/get-root#readme"
 }
