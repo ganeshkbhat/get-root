@@ -137,3 +137,12 @@ Get the root folder of jscache in the project.
  */
 ```
 
+
+### Contributions
+
+Contributions, Feature Improvements, Bugs, and Issues are invited. [raising an issue](https://github.com/ganeshkbhat/get-root/issues)
+
+
+# License
+
+[MIT License](./LICENSE)
