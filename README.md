@@ -5,6 +5,15 @@ Get root folders of git, svn, mercurial, ftp, nodejs node_modules, nodejs packag
 Find the demos in the [demos folder](./demos)
 
 
+### Demo usage:
+
+```
+
+var getroot = require("get-root");
+getroot.getRoot("./", { baseType: "git" });
+
+```
+
 ## getRoot
 
 Usage: `getRoot(startdirectory, options = { baseType: "git" })`
