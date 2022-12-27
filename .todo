@@ -1,0 +1,4 @@
+[TODO]
+
+- Add function to check for root npm folder
+- Add function to check for bin folders of java, php, perl, rust, node, npm, python
