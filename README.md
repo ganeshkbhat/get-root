@@ -2,6 +2,9 @@
 Get root folders of git, svn, mercurial, ftp, nodejs node_modules, nodejs package.json, nodejs .jscache folder
 
 
+Find the demos in the [demos folder](./demos)
+
+
 ## getRoot
 
 Usage: `getRoot(startdirectory, options = { baseType: "git" })`
@@ -16,6 +19,7 @@ Get the root folder of specified options.
  * @return {*} 
  */
 ```
+
 
 ## getNodeModulesRoot
 
@@ -47,6 +51,7 @@ Get the root folder of git in the project.
  * @return {*} 
  */
 ```
+
 
 ## getSvnRoot
 
