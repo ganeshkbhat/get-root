@@ -16,8 +16,14 @@
 'use strict';
 
 
-import { _getRoot, _getGitRoot, _getSvnRoot, _getFtpRoot, _getNodeModulesRoot, _getPackageJsonRoot, _createJscachePath } from './index.js';
+import {
+    _getRoot, _getGitRoot, _getSvnRoot, _getFtpRoot, _getNodeModulesRoot, _getPackageJsonRoot, _createJscachePath,
+    getRoot, getGitRoot, getSvnRoot, getFtpRoot, getNodeModulesRoot, getPackageJsonRoot, createJscachePath
+} from './index.js';
 import * as getroot from "./index.js";
 
 export default getroot;
-export { _getRoot, _getGitRoot, _getSvnRoot, _getFtpRoot, _getNodeModulesRoot, _getPackageJsonRoot, _createJscachePath };
+export {
+    _getRoot, _getGitRoot, _getSvnRoot, _getFtpRoot, _getNodeModulesRoot, _getPackageJsonRoot, _createJscachePath,
+    getRoot, getGitRoot, getSvnRoot, getFtpRoot, getNodeModulesRoot, getPackageJsonRoot, createJscachePath
+};

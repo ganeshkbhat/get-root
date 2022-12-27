@@ -230,4 +230,14 @@ module.exports._getFtpRoot = _getFtpRoot;
 module.exports._getNodeModulesRoot = _getNodeModulesRoot;
 module.exports._getPackageJsonRoot = _getPackageJsonRoot;
 module.exports._createJscachePath = _createJscachePath;
+
+module.exports.getRoot = _getRoot;
+module.exports.getGitRoot = _getGitRoot;
+module.exports.getSvnRoot = _getSvnRoot;
+module.exports.getFtpRoot = _getFtpRoot;
+module.exports.getNodeModulesRoot = _getNodeModulesRoot;
+module.exports.getPackageJsonRoot = _getPackageJsonRoot;
+module.exports.createJscachePath = _createJscachePath;
+
+
 module.exports.default = _getRoot;
