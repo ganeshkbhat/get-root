@@ -10,7 +10,7 @@ Find the demos in the [demos folder](./demos)
 ```
 
 var getroot = require("get-root");
-getroot.getRoot("./", { baseType: "git" });
+let result = getroot.getRoot("./", { baseType: "git" });
 
 ```
 
