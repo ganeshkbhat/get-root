@@ -1,5 +1,5 @@
 # get-root
-Get root folders of git, svn, mercurial, ftp, nodejs node_modules, nodejs package.json, nodejs .jscache folder
+Get root folders of git, svn, mercurial, nodejs node_modules / package.json / package-lock.json, and nodejs .jscache folder
 
 
 Find the demos in the [demos folder](./demos)
@@ -14,9 +14,9 @@ let result = getroot.getRoot("./", { baseType: "git" });
 
 ```
 
-## getRoot
+## .getRoot
 
-Usage: `getRoot(startdirectory, options = { baseType: "git" })`
+Usage: `getRoot(startdirectory, options = { baseType: "git", getRootCallback: callbackFunction })`
 
 Get the root folder of specified options.
 
@@ -30,7 +30,7 @@ Get the root folder of specified options.
 ```
 
 
-## getNodeModulesRoot
+## .getNodeModulesRoot
 
 Usage: `getNodeModulesRoot(startdirectory, options)`
 
@@ -46,7 +46,7 @@ Get the root folder of node in the project.
 ```
 
 
-## getGitRoot
+## .getGitRoot
 
 Usage: `getGitRoot(startdirectory, options)`
 
@@ -62,7 +62,7 @@ Get the root folder of git in the project.
 ```
 
 
-## getSvnRoot
+## .getSvnRoot
 
 Usage: `getSvnRoot(startdirectory, options)`
 
@@ -78,24 +78,8 @@ Get the root folder of svn in the project.
 ```
 
 
-## getFtpRoot
 
-
-Usage: `getFtpRoot(startdirectory, options)`
-
-Get the root folder of ftp in the project.
-
-```
-/**
- *
- * @param {*} startdirectory
- * @param {*} options
- * @return {*} 
- */
-```
-
-
-## getMercurialRoot
+## .getMercurialRoot
 
 Usage: `getMercurialRoot(startdirectory, options)`
 
@@ -112,7 +96,7 @@ Get the root folder of mercurial in the project.
 ```
 
 
-## getPackageJsonRoot
+## .getPackageJsonRoot
 
 
 Usage: `getPackageJsonRoot(startdirectory, options)`
@@ -129,7 +113,24 @@ Get the root folder of package.json in the project.
 ```
 
 
-## createJscachePath
+## .getPackageLockJsonRoot
+
+
+Usage: `getPackageLockJsonRoot(startdirectory, options)`
+
+Get the root folder of package.json in the project.
+
+```
+/**
+ *
+ * @param {*} startdirectory
+ * @param {*} options
+ * @return {*} 
+ */
+```
+
+
+## .createJscachePath
 
 
 Usage: `createJscachePath(startdirectory, options)`

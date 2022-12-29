@@ -1,7 +1,7 @@
 {
   "name": "root-dirs",
   "version": "0.0.3",
-  "description": "Get root folders of git, svn, mercurial, ftp, nodejs node_modules, nodejs package.json, nodejs package-lock.json,, nodejs .jscache folder",
+  "description": "Get root folders of git, svn, mercurial, nodejs node_modules / package.json / package-lock.json, and nodejs .jscache folder",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec --recursive --timeout 60000"
@@ -80,7 +80,6 @@
     "node modules",
     "git root",
     "svn root",
-    "ftp root",
     "mercurial root",
     "repo",
     "repo root",
