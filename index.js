@@ -247,7 +247,7 @@ function _createJscachePath(startdirectory, options) {
 module.exports._getRoot = _getRoot;
 module.exports._getGitRoot = _getGitRoot;
 module.exports._getSvnRoot = _getSvnRoot;
-module.exports._getFtpRoot = _getFtpRoot;
+// module.exports._getFtpRoot = _getFtpRoot;
 module.exports._getMercurialRoot = _getMercurialRoot;
 module.exports._getNodeModulesRoot = _getNodeModulesRoot;
 module.exports._getPackageJsonRoot = _getPackageJsonRoot;
@@ -257,7 +257,7 @@ module.exports._getJscachePath = _getJscachePath;
 module.exports.getRoot = _getRoot;
 module.exports.getGitRoot = _getGitRoot;
 module.exports.getSvnRoot = _getSvnRoot;
-module.exports.getFtpRoot = _getFtpRoot;
+// module.exports.getFtpRoot = _getFtpRoot;
 module.exports.getMercurialRoot = _getMercurialRoot;
 module.exports.getNodeModulesRoot = _getNodeModulesRoot;
 module.exports.getPackageJsonRoot = _getPackageJsonRoot;

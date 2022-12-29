@@ -17,14 +17,14 @@
 
 
 import {
-    _getRoot, _getGitRoot, _getSvnRoot, _getFtpRoot, _getNodeModulesRoot, _getPackageJsonRoot, _createJscachePath,
-    getRoot, getGitRoot, getSvnRoot, getFtpRoot, getNodeModulesRoot, getPackageJsonRoot, getPackageLockJsonRoot, createJscachePath, getJscachePath
+    _getRoot, _getGitRoot, _getSvnRoot, _getNodeModulesRoot, _getPackageJsonRoot, _getJscachePath, _getMercurialRoot,
+    getRoot, getGitRoot, getSvnRoot, getNodeModulesRoot, getPackageJsonRoot, getPackageLockJsonRoot, getJscachePath, getMercurialRoot,
 } from './index.js';
 import * as getroot from "./index.js";
 
 export default getroot;
 
 export {
-    _getRoot, _getGitRoot, _getSvnRoot, _getFtpRoot, _getNodeModulesRoot, _getPackageJsonRoot, _createJscachePath,
-    getRoot, getGitRoot, getSvnRoot, getFtpRoot, getNodeModulesRoot, getPackageJsonRoot, getPackageLockJsonRoot, createJscachePath, getJscachePath
+    _getRoot, _getGitRoot, _getSvnRoot, _getNodeModulesRoot, _getPackageJsonRoot, _getJscachePath, _getMercurialRoot,
+    getRoot, getGitRoot, getSvnRoot, getNodeModulesRoot, getPackageJsonRoot, getPackageLockJsonRoot, getJscachePath, getMercurialRoot,
 };

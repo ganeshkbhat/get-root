@@ -16,6 +16,9 @@
 'use strict';
 
 var getroot = require("../index.js");
-let result = getroot.getSvnRoot(__dirname, { baseType: "svn", logger: console.log });
 
+let result = getroot.getSvnRoot(__dirname, { baseType: "svn", logger: console.log });
+console.log(result);
+
+result = getroot.getSvnRoot(__dirname, { baseType: ".svn", logger: console.log });
 console.log(result);

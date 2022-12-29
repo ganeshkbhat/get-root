@@ -15,7 +15,16 @@
 
 'use strict';
 
+const expect = require('chai').expect;
 var getroot = require("../index.js");
-// let result = getroot.getRequire(__dirname, { baseType: "ftp", logger: console.log });
 
-// console.log(result);
+
+let result = getroot.getMercurialRoot(__dirname, { baseType: "mercurial", logger: console.log });
+console.log(result);
+
+result = getroot.getMercurialRoot(__dirname, { baseType: "hg", logger: console.log });
+console.log(result);
+
+result = getroot.getMercurialRoot(__dirname, { baseType: ".hg", logger: console.log });
+console.log(result);
+
