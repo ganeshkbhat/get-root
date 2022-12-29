@@ -130,10 +130,10 @@ Get the root folder of package.json in the project.
 ```
 
 
-## .createJscachePath
+## .getJscachePath
 
 
-Usage: `createJscachePath(startdirectory, options)`
+Usage: `getJscachePath(startdirectory, options)`
 
 Get the root folder of jscache in the project.
 
