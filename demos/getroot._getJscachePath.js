@@ -16,6 +16,6 @@
 'use strict';
 
 var getroot = require("../index.js");
-let result = getroot.getSvnRoot(__dirname, { baseType: "svn", logger: console.log });
+let result = getroot._getJscachePath(__dirname, { baseType: "jscache", logger: console.log });
 
 console.log(result);

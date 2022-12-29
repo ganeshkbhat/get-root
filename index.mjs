@@ -18,12 +18,13 @@
 
 import {
     _getRoot, _getGitRoot, _getSvnRoot, _getFtpRoot, _getNodeModulesRoot, _getPackageJsonRoot, _createJscachePath,
-    getRoot, getGitRoot, getSvnRoot, getFtpRoot, getNodeModulesRoot, getPackageJsonRoot, createJscachePath
+    getRoot, getGitRoot, getSvnRoot, getFtpRoot, getNodeModulesRoot, getPackageJsonRoot, getPackageLockJsonRoot, createJscachePath, getJscachePath
 } from './index.js';
 import * as getroot from "./index.js";
 
 export default getroot;
+
 export {
     _getRoot, _getGitRoot, _getSvnRoot, _getFtpRoot, _getNodeModulesRoot, _getPackageJsonRoot, _createJscachePath,
-    getRoot, getGitRoot, getSvnRoot, getFtpRoot, getNodeModulesRoot, getPackageJsonRoot, createJscachePath
+    getRoot, getGitRoot, getSvnRoot, getFtpRoot, getNodeModulesRoot, getPackageJsonRoot, getPackageLockJsonRoot, createJscachePath, getJscachePath
 };

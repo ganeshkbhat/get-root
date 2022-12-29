@@ -14,3 +14,8 @@
 /* eslint no-console: 0 */
 
 'use strict';
+
+var getroot = require("../index.js");
+let result = getroot._getNodeModulesRoot(__dirname, { baseType: "node_modules", logger: console.log });
+
+console.log(result);

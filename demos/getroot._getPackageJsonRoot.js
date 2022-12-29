@@ -14,3 +14,8 @@
 /* eslint no-console: 0 */
 
 'use strict';
+
+var getroot = require("../index.js");
+let result = getroot.getPackageJsonRoot(__dirname, { baseType: "package.json", logger: console.log });
+
+console.log(result);
