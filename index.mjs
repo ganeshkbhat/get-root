@@ -19,6 +19,7 @@
 import {
     _getRoot, _getGitRoot, _getSvnRoot, _getNodeModulesRoot, _getPackageJsonRoot, _getJscachePath, _getMercurialRoot,
     getRoot, getGitRoot, getSvnRoot, getNodeModulesRoot, getPackageJsonRoot, getPackageLockJsonRoot, getJscachePath, getMercurialRoot,
+    _getCacheRoot, _getTmpRoot, _getTmpRoot, getCacheRoot, getTmpRoot, getTmpRoot
 } from './index.js';
 import * as getroot from "./index.js";
 
@@ -27,4 +28,6 @@ export default getroot;
 export {
     _getRoot, _getGitRoot, _getSvnRoot, _getNodeModulesRoot, _getPackageJsonRoot, _getJscachePath, _getMercurialRoot,
     getRoot, getGitRoot, getSvnRoot, getNodeModulesRoot, getPackageJsonRoot, getPackageLockJsonRoot, getJscachePath, getMercurialRoot,
+    _getCacheRoot, _getTmpRoot, _getTmpRoot, getCacheRoot, getTmpRoot, getTmpRoot
 };
+

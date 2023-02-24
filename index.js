@@ -168,6 +168,57 @@ function _getFtpRoot(startdirectory, options) {
  * @param {*} options
  * @return {*} 
  */
+function _getCacheRoot(startdirectory, options) {
+    return "[ERROR]: NOT IMPLEMENTED YET";
+    function cb(fullPath, options) {
+
+        return path.normalize(fullPath);
+    }
+    options.baseType = "cache";
+    return _getRoot(startdirectory, { ...options, baseType: options.baseType, getRootCallback: cb });
+}
+
+/**
+ *
+ *
+ * @param {*} startdirectory
+ * @param {*} options
+ * @return {*} 
+ */
+function _getTempRoot(startdirectory, options) {
+    return "[ERROR]: NOT IMPLEMENTED YET";
+    function cb(fullPath, options) {
+
+        return path.normalize(fullPath);
+    }
+    options.baseType = "temp";
+    return _getRoot(startdirectory, { ...options, baseType: options.baseType, getRootCallback: cb });
+}
+
+/**
+ *
+ *
+ * @param {*} startdirectory
+ * @param {*} options
+ * @return {*} 
+ */
+function _getTmpRoot(startdirectory, options) {
+    return "[ERROR]: NOT IMPLEMENTED YET";
+    function cb(fullPath, options) {
+
+        return path.normalize(fullPath);
+    }
+    options.baseType = "tmp";
+    return _getRoot(startdirectory, { ...options, baseType: options.baseType, getRootCallback: cb });
+}
+
+/**
+ *
+ *
+ * @param {*} startdirectory
+ * @param {*} options
+ * @return {*} 
+ */
 function _getMercurialRoot(startdirectory, options) {
     function cb(fullPath, options) {
         if ((!!options.fileFolder && options.fileFolder !== "folder") && (options.baseType === ".hg" || options.baseType === "hg") && !fs.lstatSync(fullPath).isDirectory()) {
@@ -253,6 +304,10 @@ module.exports._getNodeModulesRoot = _getNodeModulesRoot;
 module.exports._getPackageJsonRoot = _getPackageJsonRoot;
 module.exports._getPackageLockJsonRoot = _getPackageJsonRoot;
 module.exports._getJscachePath = _getJscachePath;
+module.exports._getCacheRoot = _getCacheRoot;
+module.exports._getTmpRoot = _getTmpRoot;
+module.exports._getTmpRoot = _getTmpRoot;
+
 
 module.exports.getRoot = _getRoot;
 module.exports.getGitRoot = _getGitRoot;
@@ -263,6 +318,9 @@ module.exports.getNodeModulesRoot = _getNodeModulesRoot;
 module.exports.getPackageJsonRoot = _getPackageJsonRoot;
 module.exports.getPackageLockJsonRoot = _getPackageJsonRoot;
 module.exports.getJscachePath = _getJscachePath;
+module.exports.getCacheRoot = _getCacheRoot;
+module.exports.getTmpRoot = _getTmpRoot;
+module.exports.getTmpRoot = _getTmpRoot;
 
 
 module.exports.default = _getRoot;
